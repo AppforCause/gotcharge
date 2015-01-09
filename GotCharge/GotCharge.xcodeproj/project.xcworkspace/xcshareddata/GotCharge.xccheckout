@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>82534B0D-40AB-40DB-B0EB-3A36993D5850</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GotCharge</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6E79C0B304996103667551E035B7FE71F70CAA13</key>
+		<string>https://github.com/AppforCause/gocharge.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GotCharge/GotCharge.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6E79C0B304996103667551E035B7FE71F70CAA13</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/AppforCause/gocharge.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6E79C0B304996103667551E035B7FE71F70CAA13</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6E79C0B304996103667551E035B7FE71F70CAA13</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hackthedrive</string>
+		</dict>
+	</array>
+</dict>
+</plist>
