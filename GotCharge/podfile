@@ -1,0 +1,6 @@
+platform :ios, '8.1'
+pod 'AFNetworking'
+pod 'Parse'
+pod 'Mantle'
+pod 'BDBOAuth1Manager'
+pod 'MBProgressHUD'
