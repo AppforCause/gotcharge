@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		37A56A351A60911A0090046A /* BMWClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A56A341A60911A0090046A /* BMWClient.m */; };
+		37A56A431A61C96C0090046A /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A401A61C96C0090046A /* gear.png */; };
+		37A56A441A61C96C0090046A /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A411A61C96C0090046A /* profile.png */; };
+		37A56A451A61C96C0090046A /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A421A61C96C0090046A /* star.png */; };
 		61454BDE1A608AE900D17DF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BDD1A608AE900D17DF6 /* main.m */; };
 		61454BE11A608AE900D17DF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BE01A608AE900D17DF6 /* AppDelegate.m */; };
 		61454BE41A608AE900D17DF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BE31A608AE900D17DF6 /* ViewController.m */; };
@@ -35,6 +38,9 @@
 /* Begin PBXFileReference section */
 		37A56A331A60911A0090046A /* BMWClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMWClient.h; sourceTree = "<group>"; };
 		37A56A341A60911A0090046A /* BMWClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMWClient.m; sourceTree = "<group>"; };
+		37A56A401A61C96C0090046A /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		37A56A411A61C96C0090046A /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		37A56A421A61C96C0090046A /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		61454BD81A608AE900D17DF6 /* GotCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61454BDC1A608AE900D17DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61454BDD1A608AE900D17DF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,9 +95,28 @@
 			name = "BMW client";
 			sourceTree = "<group>";
 		};
+		37A56A361A61C8F90090046A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37A56A371A61C91A0090046A /* Assets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37A56A371A61C91A0090046A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				37A56A401A61C96C0090046A /* gear.png */,
+				37A56A411A61C96C0090046A /* profile.png */,
+				37A56A421A61C96C0090046A /* star.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		61454BCF1A608AE900D17DF6 = {
 			isa = PBXGroup;
 			children = (
+				37A56A361A61C8F90090046A /* Supporting Files */,
 				37A56A2F1A6090070090046A /* BMW client */,
 				61454BDA1A608AE900D17DF6 /* GotCharge */,
 				61454BF41A608AE900D17DF6 /* GotChargeTests */,
@@ -258,7 +283,10 @@
 			files = (
 				61454BE71A608AE900D17DF6 /* Main.storyboard in Resources */,
 				61454BEC1A608AE900D17DF6 /* LaunchScreen.xib in Resources */,
+				37A56A431A61C96C0090046A /* gear.png in Resources */,
+				37A56A441A61C96C0090046A /* profile.png in Resources */,
 				61454BE91A608AE900D17DF6 /* Images.xcassets in Resources */,
+				37A56A451A61C96C0090046A /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
