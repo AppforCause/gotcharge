@@ -8,6 +8,24 @@
 
 #import "BMWClient.h"
 
+#define BMW_BASE_URL [NSURL URLWithString:@"https://api.twitter.com/"]
+
+#define BMW_CONSUMER_KEY @"c8a89bf5-826e-41b5-b258-a21799af32aa"
+#define BMW_CONSUMER_SECRET @"81b91829-433c-434a-9527-ccd69f2c36ee"
+
 @implementation BMWClient
+
+// Singelton
++ (BMWClient *)instance{
+    static BMWClient *instance = nil;
+    
+    static dispatch_once_t pred;
+    
+    dispatch_once(&pred, ^{
+        instance = [[BMWClient alloc] initWithBaseURL:BMW_BASE_URL consumerKey:BMW_CONSUMER_KEY consumerSecret:BMW_CONSUMER_SECRET];
+    });
+    
+    return instance;
+}
 
 @end

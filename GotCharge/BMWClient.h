@@ -10,4 +10,8 @@
 
 @interface BMWClient : BDBOAuth1RequestOperationManager
 
++ (BMWClient *)instance;
+
+- (void)login;
+
 @end
