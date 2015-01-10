@@ -16,7 +16,6 @@
 
 @implementation BMWClient
 
-/*
 // Singelton
 + (BMWClient *)instance{
     static BMWClient *instance = nil;
@@ -24,11 +23,14 @@
     static dispatch_once_t pred;
     
     dispatch_once(&pred, ^{
-        instance = [[BMWClient alloc] initWithBaseURL:BMW_BASE_URL consumerKey:BMW_CONSUMER_KEY consumerSecret:BMW_CONSUMER_SECRET];
+//        instance = [[BMWClient alloc] initWithBaseURL:BMW_BASE_URL consumerKey:BMW_CONSUMER_KEY consumerSecret:BMW_CONSUMER_SECRET];
+        instance = [[BMWClient alloc] init];
     });
     
     return instance;
 }
+
+/*
 
 - (void)login {
     // Request my request token

@@ -13,7 +13,7 @@
 @interface BMWClient : NSObject
 
 
-//+ (BMWClient *)instance;
++ (BMWClient *)instance;
 //
 //- (void)login;
 

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 appforcause. All rights reserved.
 //
 
-#import "MTLModel.h"
+#import "Mantle.h"
 
 // Reference
 //Vehicle {
@@ -69,7 +69,7 @@
 //}
 
 
-@interface BMWVehicle : MTLModel
+@interface BMWVehicle : MTLModel <MTLJSONSerializing>
 
 @property(strong, nonatomic) NSString    *name;
 @property(strong, nonatomic) NSString    *vin;
@@ -78,15 +78,16 @@
 @property(strong, nonatomic) NSString    *doorsAjar;
 @property(strong, nonatomic) NSString    *parkingBreakEngaged;
 @property(nonatomic) double              lastBatteryLevel;
-@property(nonatomic) double              LastRange;
+@property(nonatomic) double              lastRange;
 @property(nonatomic) double              LastFuelEfficiency;
 @property(nonatomic) double              latitude;
 @property(nonatomic) double              longitude;
 
 
 
++ (BMWVehicle *)currentVehicle;
 
-+ (BMWVehicle*) initFromJson:(NSDictionary *)dictionary;
++ (BMWVehicle *) initFromJson:(NSDictionary *)dictionary;
 
 - (void) dumpVehicleInfo;
 
