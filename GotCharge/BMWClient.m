@@ -8,10 +8,11 @@
 
 #import "BMWClient.h"
 
-#define BMW_BASE_URL [NSURL URLWithString:@"https://data.api.hackthedrive.com/v1/"]
+#define BMW_BASE_URL [NSURL URLWithString:@"http://data.api.hackthedrive.com:80/v1/"]
 
 #define BMW_CONSUMER_KEY @"c8a89bf5-826e-41b5-b258-a21799af32aa"
 #define BMW_CONSUMER_SECRET @"81b91829-433c-434a-9527-ccd69f2c36ee"
+#define BMW_MOJIOAPI_TOKEN @"8a89bf5-826e-41b5-b258-a21799af32aa"
 
 @implementation BMWClient
 
@@ -46,6 +47,36 @@
 }
 */
 
+- (void) getRangeWithcompletionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completion {
+    
+    NSError *error;
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
+    NSString *apiEndpoint = [NSString stringWithFormat:@"%@/Vehicles", BMW_BASE_URL];
+    NSURL *url = [NSURL URLWithString:apiEndpoint];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:60.0];
+    
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request addValue:BMW_MOJIOAPI_TOKEN forHTTPHeaderField:@"MojioApiToken"];
+
+    
+    [request setHTTPMethod:@"GET"];
+//    NSDictionary *mapData = [[NSDictionary alloc] initWithObjectsAndKeys: @"TEST IOS", @"name",
+//                             @"IOS TYPE", @"typemap",
+//                             nil];
+//    NSData *postData = [NSJSONSerialization dataWithJSONObject:mapData options:0 error:&error];
+//    [request setHTTPBody:postData];
+    
+    
+    NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:completion];
+
+    [postDataTask resume];
+
+}
 
 
 @end

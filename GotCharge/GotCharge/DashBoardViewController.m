@@ -8,9 +8,11 @@
 
 #import "DashBoardViewController.h"
 #import "RNFrostedSidebar.h"
+#import "BMWClient.h"
 
 @interface DashBoardViewController ()
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
+@property (nonatomic, strong) BMWClient         *bmwClient;
 
 
 @end
@@ -21,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
+    self.bmwClient = [[BMWClient alloc] init];
     NSLog(@"dash view controlled view did load");
 }
 
@@ -44,9 +47,13 @@
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
     NSLog(@"Tapped item at index %i",index);
+    
     if (index == 2) {
         [sidebar dismissAnimated:YES completion:nil];
     }
+    [self.bmwClient getRangeWithcompletionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSLog(@"response recieved for getRange: data '%@'  error: '%@'", data, [error description]);
+    }];
 }
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {

@@ -17,4 +17,6 @@
 //
 //- (void)login;
 
+- (void) getRangeWithcompletionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completion;
+
 @end
