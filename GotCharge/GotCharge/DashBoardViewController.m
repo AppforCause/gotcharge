@@ -9,11 +9,13 @@
 #import "DashBoardViewController.h"
 #import "RNFrostedSidebar.h"
 #import "BMWClient.h"
+#import "KAProgressLabel.h"
 
 @interface DashBoardViewController ()
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 @property (nonatomic, strong) BMWClient         *bmwClient;
 
+@property (weak, nonatomic) IBOutlet KAProgressLabel *batteryLevelProgress;
 
 @end
 
@@ -25,6 +27,19 @@
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
     self.bmwClient = [[BMWClient alloc] init];
     NSLog(@"dash view controlled view did load");
+    
+    self.batteryLevelProgress.progressLabelVCBlock = ^(KAProgressLabel *label, CGFloat progress) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [label setText:[NSString stringWithFormat:@"%.0f%%", (progress*100)]];
+        });
+    };
+    
+    [self.batteryLevelProgress setBackBorderWidth: 10.0];
+    [self.batteryLevelProgress setFrontBorderWidth: 9.8];
+    [self.batteryLevelProgress setColorTable: @{
+                                  NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):[UIColor redColor],
+                                  NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):[UIColor greenColor]
+                                  }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -100,4 +115,12 @@
      NSLog(@"Side bar tapped");
      [self launchSideBarMenu];
 }
+
+#pragma mark - delegate
+
+- (void)progressLabel:(KAProgressLabel *)label progressChanged:(CGFloat)progress
+{
+    [label setText:[NSString stringWithFormat:@"%.0f%%", (progress*100)]];
+}
+
 @end
