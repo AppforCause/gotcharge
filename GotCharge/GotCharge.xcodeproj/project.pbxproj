@@ -12,6 +12,7 @@
 		37A56A441A61C96C0090046A /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A411A61C96C0090046A /* profile.png */; };
 		37A56A451A61C96C0090046A /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A421A61C96C0090046A /* star.png */; };
 		37A56A491A61D9CC0090046A /* hamburgerMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A481A61D9CC0090046A /* hamburgerMenu.png */; };
+		37A56A4D1A61DB190090046A /* BMWVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A56A4C1A61DB190090046A /* BMWVehicle.m */; };
 		61454BDE1A608AE900D17DF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BDD1A608AE900D17DF6 /* main.m */; };
 		61454BE11A608AE900D17DF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BE01A608AE900D17DF6 /* AppDelegate.m */; };
 		61454BE41A608AE900D17DF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BE31A608AE900D17DF6 /* ViewController.m */; };
@@ -43,6 +44,8 @@
 		37A56A411A61C96C0090046A /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		37A56A421A61C96C0090046A /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		37A56A481A61D9CC0090046A /* hamburgerMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburgerMenu.png; sourceTree = "<group>"; };
+		37A56A4B1A61DB190090046A /* BMWVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMWVehicle.h; sourceTree = "<group>"; };
+		37A56A4C1A61DB190090046A /* BMWVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMWVehicle.m; sourceTree = "<group>"; };
 		61454BD81A608AE900D17DF6 /* GotCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61454BDC1A608AE900D17DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61454BDD1A608AE900D17DF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,9 +119,19 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		37A56A4A1A61DAD40090046A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37A56A4B1A61DB190090046A /* BMWVehicle.h */,
+				37A56A4C1A61DB190090046A /* BMWVehicle.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		61454BCF1A608AE900D17DF6 = {
 			isa = PBXGroup;
 			children = (
+				37A56A4A1A61DAD40090046A /* Models */,
 				37A56A361A61C8F90090046A /* Supporting Files */,
 				37A56A2F1A6090070090046A /* BMW client */,
 				61454BDA1A608AE900D17DF6 /* GotCharge */,
@@ -341,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A56A4D1A61DB190090046A /* BMWVehicle.m in Sources */,
 				61454BE41A608AE900D17DF6 /* ViewController.m in Sources */,
 				61454BE11A608AE900D17DF6 /* AppDelegate.m in Sources */,
 				61454C061A60D35F00D17DF6 /* RNFrostedSidebar.m in Sources */,
