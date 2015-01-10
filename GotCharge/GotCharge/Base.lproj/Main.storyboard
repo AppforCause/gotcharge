@@ -72,27 +72,27 @@
             <objects>
                 <viewController id="SPo-wZ-3cK" customClass="DashBoardViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3wu-z5-lYd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0xi-kl-Cte" customClass="KAProgressLabel">
-                                <rect key="frame" x="21" y="109" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.078073276639999994" green="0.50476015880000003" blue="0.77290482949999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WBI-Sc-JQI" customClass="KAProgressLabel">
-                                <rect key="frame" x="179" y="109" width="120" height="120"/>
+                                <rect key="frame" x="31" y="109" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.078073276639999994" green="0.50476015880000003" blue="0.77290482949999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="adr-C0-QHt">
-                                <rect key="frame" x="9" y="281" width="300" height="276"/>
+                                <rect key="frame" x="0.0" y="281" width="375" height="386"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WBI-Sc-JQI" customClass="KAProgressLabel">
+                                <rect key="frame" x="209" y="109" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.078073276639999994" green="0.50476015880000003" blue="0.77290482949999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -110,6 +110,8 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="batteryLevelProgress" destination="0xi-kl-Cte" id="zy7-rL-VAF"/>
                         <outlet property="rangeLevelProgress" destination="WBI-Sc-JQI" id="kd0-26-opf"/>
@@ -118,7 +120,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkw-r1-dYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="sWe-de-YaF"/>
             </objects>
-            <point key="canvasLocation" x="835" y="246"/>
+            <point key="canvasLocation" x="834.5" y="245.5"/>
         </scene>
     </scenes>
     <resources>
