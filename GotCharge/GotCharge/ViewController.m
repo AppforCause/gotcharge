@@ -25,4 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)loginClick:(id)sender {
+    NSLog(@"%@", self.username);
+}
 @end
