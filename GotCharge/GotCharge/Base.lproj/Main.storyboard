@@ -62,16 +62,16 @@
             </objects>
             <point key="canvasLocation" x="427" y="246"/>
         </scene>
-        <!--View Controller-->
+        <!--Dash Board View Controller-->
         <scene sceneID="9U9-W1-qrA">
             <objects>
-                <viewController id="SPo-wZ-3cK" sceneMemberID="viewController">
+                <viewController id="SPo-wZ-3cK" customClass="DashBoardViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3wu-z5-lYd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qLc-vF-5td"/>
+                    <navigationItem key="navigationItem" id="qLc-vF-5td" customClass="DashBoard"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkw-r1-dYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
