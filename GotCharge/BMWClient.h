@@ -6,12 +6,15 @@
 //  Copyright (c) 2015 appforcause. All rights reserved.
 //
 
-#import "BDBOAuth1RequestOperationManager.h"
+//#import "BDBOAuth1RequestOperationManager.h"
+#import <Foundation/Foundation.h>
 
-@interface BMWClient : BDBOAuth1RequestOperationManager
+//@interface BMWClient : BDBOAuth1RequestOperationManager
+@interface BMWClient : NSObject
 
-+ (BMWClient *)instance;
 
-- (void)login;
+//+ (BMWClient *)instance;
+//
+//- (void)login;
 
 @end
