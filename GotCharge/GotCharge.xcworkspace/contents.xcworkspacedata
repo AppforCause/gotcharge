@@ -5,6 +5,15 @@
       location = "group:hamburgerMenu.png">
    </FileRef>
    <FileRef
+      location = "group:gear.png">
+   </FileRef>
+   <FileRef
+      location = "group:profile.png">
+   </FileRef>
+   <FileRef
+      location = "group:star.png">
+   </FileRef>
+   <FileRef
       location = "group:GotCharge.xcodeproj">
    </FileRef>
    <FileRef

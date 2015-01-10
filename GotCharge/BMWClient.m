@@ -30,7 +30,7 @@
 
 - (void)login {
     // Request my request token
-    [self.requestSerializer removeAccessToken];
+/*    [self.requestSerializer removeAccessToken];
     
     [ self fetchRequestTokenWithPath:@"oauth/request_token" method:@"POST" callbackURL:[NSURL URLWithString:@"GotCharge://oauth"] scope:nil success:^(BDBOAuthToken *requestToken) {
         NSLog(@"Got the request token");
@@ -41,7 +41,7 @@
         
     } failure:^(NSError *error) {
         NSLog(@"failure to get the request token %@", [error description]);
-    }];
+    }];*/
 }
 
 @end

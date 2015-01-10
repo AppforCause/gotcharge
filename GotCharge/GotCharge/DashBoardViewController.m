@@ -91,5 +91,6 @@
 
 - (IBAction)HamburgerMenuClick:(id)sender {
      NSLog(@"Side bar tapped");
+     [self launchSideBarMenu];
 }
 @end
