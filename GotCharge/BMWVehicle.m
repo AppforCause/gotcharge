@@ -18,7 +18,7 @@
     [[BMWClient instance] getRangeWithcompletionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSLog(@"response recieved for getRange: response '%@'  error: '%@'", response, [error description]);
         currentVehicle = [ BMWVehicle initFromJson:response];
-        
+        [currentVehicle dumpVehicleInfo];
     }];
     
     
@@ -51,9 +51,16 @@
 }
 
 - (void) dumpVehicleInfo {
-//    NSLog(@"User Name: %@ @%@", self.name, self.screenName);
-//    NSLog(@"User id: %d", self.userId);
-//    NSLog(@"Profile Image %@", self.profileImageUrl);
-//    NSLog(@"Description %@", self.description);
+    NSLog(@"User Name: %@ @%@", self.name, self.vin);
+    NSLog(@"License: %@", self.licensePlate);
+    NSLog(@"modelSeries %@", self.modelSeries);
+    NSLog(@"parkingBreakEngaged %@", self.parkingBreakEngaged);
+    NSLog(@"lastBatteryLevel %f", self.lastBatteryLevel);
+    NSLog(@"lastRange %f", self.lastRange);
+    NSLog(@"lastFuelEfficiency %f", self.lastFuelEfficiency);
+    NSLog(@"latitude %f", self.latitude);
+    NSLog(@"longitude %f", self.longitude);
+
+
 }
 @end

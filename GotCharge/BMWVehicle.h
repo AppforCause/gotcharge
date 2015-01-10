@@ -79,7 +79,7 @@
 @property(strong, nonatomic) NSString    *parkingBreakEngaged;
 @property(nonatomic) double              lastBatteryLevel;
 @property(nonatomic) double              lastRange;
-@property(nonatomic) double              LastFuelEfficiency;
+@property(nonatomic) double              lastFuelEfficiency;
 @property(nonatomic) double              latitude;
 @property(nonatomic) double              longitude;
 
