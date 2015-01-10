@@ -16,6 +16,7 @@
 @property (nonatomic, strong) BMWClient         *bmwClient;
 
 @property (weak, nonatomic) IBOutlet KAProgressLabel *batteryLevelProgress;
+@property (weak, nonatomic) IBOutlet KAProgressLabel *rangeLevelProgress;
 
 @end
 
@@ -40,6 +41,23 @@
                                   NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):[UIColor redColor],
                                   NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):[UIColor greenColor]
                                   }];
+    [self.batteryLevelProgress setProgress:0.4];
+    
+    
+    self.rangeLevelProgress.progressLabelVCBlock = ^(KAProgressLabel *label, CGFloat progress) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [label setText:[NSString stringWithFormat:@"%.0f%%", (progress*100)]];
+        });
+    };
+    
+    [self.rangeLevelProgress setBackBorderWidth: 10.0];
+    [self.rangeLevelProgress setFrontBorderWidth: 9.8];
+    [self.rangeLevelProgress setColorTable: @{
+                                                NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):[UIColor redColor],
+                                                NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):[UIColor greenColor]
+                                                }];
+    [self.rangeLevelProgress setProgress:0.6];
+    
 }
 
 - (void)didReceiveMemoryWarning {
