@@ -85,4 +85,11 @@
     [self launchSideBarMenu];
 }
 
+- (IBAction)MenuClick:(id)sender {
+     NSLog(@"Side bar tapped");
+}
+
+- (IBAction)HamburgerMenuClick:(id)sender {
+     NSLog(@"Side bar tapped");
+}
 @end

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:hamburgerMenu.png">
+   </FileRef>
+   <FileRef
       location = "group:GotCharge.xcodeproj">
    </FileRef>
    <FileRef

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3Jx-f2-TXn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -54,6 +54,7 @@
         <scene sceneID="E7v-EH-xeh">
             <objects>
                 <navigationController id="3Jx-f2-TXn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Lqc-FR-f5A"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DiF-5J-Wgr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -76,16 +77,15 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="qLc-vF-5td" customClass="DashBoard">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="t6r-jp-Nah">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fcR-Xu-UMH">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="nta-Pc-7Wc">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mDO-YM-xye">
+                                <rect key="frame" x="-569" y="-579" width="1200" height="1200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <state key="normal" title="Menu">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="sWe-de-YaF" appends="YES" id="3wP-A0-qxz"/>
+                                    <action selector="HamburgerMenuClick:" destination="SPo-wZ-3cK" eventType="touchUpInside" id="6i7-KA-Zir"/>
                                 </connections>
                             </button>
                         </barButtonItem>

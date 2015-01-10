@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DashBoardViewController : UIViewController
+- (IBAction)MenuClick:(id)sender;
+- (IBAction)HamburgerMenuClick:(id)sender;
 
 @end

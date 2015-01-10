@@ -27,5 +27,8 @@
 
 - (IBAction)loginClick:(id)sender {
     NSLog(@"%@", self.username);
+    
 }
+
+
 @end
