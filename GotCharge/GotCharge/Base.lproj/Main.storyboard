@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="427" y="246"/>
         </scene>
-        <!--Dash Board View Controller-->
+        <!--Dashboard-->
         <scene sceneID="9U9-W1-qrA">
             <objects>
                 <viewController id="SPo-wZ-3cK" customClass="DashBoardViewController" sceneMemberID="viewController">
@@ -71,9 +71,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qLc-vF-5td" customClass="DashBoard"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="qLc-vF-5td" customClass="DashBoard">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="t6r-jp-Nah">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fcR-Xu-UMH">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sWe-de-YaF" appends="YES" id="3wP-A0-qxz"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkw-r1-dYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sWe-de-YaF"/>
             </objects>
             <point key="canvasLocation" x="835" y="246"/>
         </scene>
