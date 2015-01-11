@@ -36,6 +36,7 @@
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
     self.bmwClient = [[BMWClient alloc] init];
     self.chargePointClient = [[ChargepointClient alloc] init];
+    self.chargePointClient.delegate = self;
     
     [self.chargePointClient chargeStationsWithSuccess:^(NSArray *stations) {
         NSLog(@"success");
@@ -218,6 +219,11 @@
 - (void)progressLabel:(KAProgressLabel *)label progressChanged:(CGFloat)progress
 {
     [label setText:[NSString stringWithFormat:@"%.0f%%", (progress*100)]];
+}
+
+- (void) parseDoneWithArray:(NSArray *)parsedList {
+ 
+    NSLog(@"XML parsing done with charge stations %@", parsedList);
 }
 
 @end

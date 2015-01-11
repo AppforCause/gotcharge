@@ -44,7 +44,7 @@
         //        NSLog(@"response recieved for getRange: data '%@'  error: '%@'", data, [error description]);
         
         if (![[error description]  isEqual: @"null"]) {
-            failure(error);
+//            failure(error);
         }
 
         NSDictionary* jsonData = [NSJSONSerialization JSONObjectWithData:data

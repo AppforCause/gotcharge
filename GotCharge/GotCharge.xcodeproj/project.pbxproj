@@ -50,6 +50,7 @@
 		37A56A481A61D9CC0090046A /* hamburgerMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburgerMenu.png; sourceTree = "<group>"; };
 		37A56A4B1A61DB190090046A /* BMWVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMWVehicle.h; sourceTree = "<group>"; };
 		37A56A4C1A61DB190090046A /* BMWVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMWVehicle.m; sourceTree = "<group>"; };
+		37A56A4F1A6233E40090046A /* XMLParseDone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLParseDone.h; sourceTree = "<group>"; };
 		61454BD81A608AE900D17DF6 /* GotCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61454BDC1A608AE900D17DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61454BDD1A608AE900D17DF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +143,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		37A56A4E1A62338D0090046A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				37A56A4F1A6233E40090046A /* XMLParseDone.h */,
+			);
+			name = Protocols;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		61454BCF1A608AE900D17DF6 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 		61454BDA1A608AE900D17DF6 /* GotCharge */ = {
 			isa = PBXGroup;
 			children = (
+				37A56A4E1A62338D0090046A /* Protocols */,
 				61454BDF1A608AE900D17DF6 /* AppDelegate.h */,
 				61454BE01A608AE900D17DF6 /* AppDelegate.m */,
 				61454BE21A608AE900D17DF6 /* ViewController.h */,

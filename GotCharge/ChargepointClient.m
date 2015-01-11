@@ -88,6 +88,7 @@
     //  NSLog(@"%@",myXMLResponse);
     // NSData *
     
+    self.stationArray = [[NSMutableArray alloc] init];
     self.parser = [[NSXMLParser alloc] initWithData:self.webResponseData];
     [self.parser setDelegate:self];
     [self.parser setShouldResolveExternalEntities:NO];
@@ -143,7 +144,12 @@
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
     
     NSLog(@"parser end");
-    
+    if ([self.delegate respondsToSelector:@selector(parseDoneWithArray:)]) {
+        //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        [self.delegate parseDoneWithArray:self.stationArray];
+        //        });
+    }
 }
 
 

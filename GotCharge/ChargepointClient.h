@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ChargeStation.h"
+#import "XMLParseDone.h"
 
 @interface ChargepointClient : NSObject <NSXMLParserDelegate>
 
-@property (weak, nonatomic) id delegate;
+@property (weak, nonatomic) id<XMLParseDone> delegate;
 
 
 -(NSArray *)chargeStationsWithSuccess: (void (^)(NSArray *stations))success failure:(void (^)(NSError *error))failure;
