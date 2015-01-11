@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet KAProgressLabel *rangeLevelProgress;
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
 @property(nonatomic, retain) CLLocationManager *locationManager;
+@property (strong,nonatomic) BMWVehicle *vehicleStats;
 
 @end
 
@@ -63,10 +64,17 @@
                                                 }];
     [self.rangeLevelProgress setProgress:0.6];
     
+    // *********************************************************
+    
+      self.vehicleStats = [BMWVehicle currentVehicle];
+    
+    //***********************************************************
+    
     self.mapView.delegate = self;
     [self.mapView setMapType:MKMapTypeStandard];
     [self.mapView setZoomEnabled:YES];
     [self.mapView setScrollEnabled:YES];
+    
     
     
 }
@@ -138,8 +146,10 @@
 //    [self.bmwClient getRangeWithcompletionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 //        NSLog(@"response recieved for getRange: data '%@'  error: '%@'", data, [error description]);
 //    }];
-    BMWVehicle *vehicle = [BMWVehicle currentVehicle];
+  
 }
+
+
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {
     if (itemEnabled) {
