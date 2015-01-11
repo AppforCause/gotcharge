@@ -11,5 +11,6 @@
 @interface ChargeStationViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSArray   *stationArray;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
