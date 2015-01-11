@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GotCharge/DashBoardViewController.m"
-            timestampString = "442698863.729932"
+            timestampString = "442699368.655943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "387"
-            endingLineNumber = "387">
+            startingLineNumber = "386"
+            endingLineNumber = "386">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -184,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GotCharge/DashBoardViewController.m"
-            timestampString = "442698863.729932"
+            timestampString = "442699368.655943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324">
+            startingLineNumber = "323"
+            endingLineNumber = "323">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

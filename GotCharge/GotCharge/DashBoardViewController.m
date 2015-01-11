@@ -58,10 +58,9 @@
     [self.batteryLevelProgress setBackBorderWidth: 10.0];
     [self.batteryLevelProgress setFrontBorderWidth: 9.8];
     [self.batteryLevelProgress setColorTable: @{
-                                                NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):[self colorWithHexString:@"#dgdee0"], //dgdee0
+                                                NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):[self colorWithHexString:@"d6dee0"], //dgdee0
                                                 //[UIColor redColor],
-                                                NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):[UIColor greenColor]
-                                                //[self colorWithHexString:@"#f36c60"],
+                                                NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):[self colorWithHexString:@"f36c60"]
                                                 //[UIColor greenColor]
                                                 }];
     [self.batteryLevelProgress setProgress:0.4];
@@ -80,8 +79,8 @@
     [self.rangeLevelProgress setBackBorderWidth: 10.0];
     [self.rangeLevelProgress setFrontBorderWidth: 9.8];
     [self.rangeLevelProgress setColorTable: @{
-                                              NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):[UIColor redColor],
-                                              NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):[UIColor greenColor]
+                                              NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):[self colorWithHexString:@"d6dee0"],
+                                              NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):[self colorWithHexString:@"1fb11c"], //1fb11c
                                               }];
     [self.rangeLevelProgress setProgress:0.6];
     
@@ -102,7 +101,7 @@
     [self.mapView setZoomEnabled:YES];
     [self.mapView setScrollEnabled:YES];
     
-    //self.view.backgroundColor = [self colorWithHexString:@"#ecf0f1"];
+    self.view.backgroundColor = [self colorWithHexString:@"ecf0f1"];
     
     
 }

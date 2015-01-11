@@ -115,11 +115,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="TG5-do-d1S">
-                                <rect key="frame" x="184" y="88" width="1" height="181"/>
+                                <rect key="frame" x="185" y="68" width="1" height="213"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999966" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dashboard_battery@3x.png" id="Hcx-HX-klF">
+                            <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dashboard_battery@3x.png" id="Hcx-HX-klF">
                                 <rect key="frame" x="83" y="142" width="38" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -130,10 +130,6 @@
                                 <color key="textColor" red="0.078073276639999994" green="0.50476015880000003" blue="0.77290482949999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dashboard_range@3x.png" id="ifI-Rj-e9M">
-                                <rect key="frame" x="251" y="142" width="38" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ePf-7g-Z8W">
                                 <rect key="frame" x="225" y="199" width="80" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -141,6 +137,15 @@
                                 <color key="textColor" red="0.078073276639999994" green="0.50476015880000003" blue="0.77290482949999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dashboard_range@3x.png" id="ifI-Rj-e9M">
+                                <rect key="frame" x="251" y="142" width="38" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="Zf5-Oe-Jsx">
+                                <rect key="frame" x="0.0" y="62" width="400" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -169,7 +174,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkw-r1-dYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="sWe-de-YaF"/>
             </objects>
-            <point key="canvasLocation" x="834.5" y="245.5"/>
+            <point key="canvasLocation" x="832.5" y="245.5"/>
         </scene>
     </scenes>
     <resources>
