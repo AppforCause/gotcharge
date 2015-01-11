@@ -128,12 +128,16 @@
         //[title appendString:string];
         self.currentStation.address = string;
         NSLog(@"Address: %@", string);
-    } else if ([self.element isEqualToString:@"City"]) {
+    } else if ([self.element isEqualToString:@"stationName"]) {
         self.currentStation.stationName = string;
-        NSLog(@"City: %@", string);
+        NSLog(@"Station Name: %@", string);
         //[link appendString:string];
     }
-    
+    else if ([self.element isEqualToString:@"Lat"]) {
+       // self.currentStation.latitude = [string floatValue];
+        NSLog(@"Lat: %@", string);
+        //[link appendString:string];
+    }
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
