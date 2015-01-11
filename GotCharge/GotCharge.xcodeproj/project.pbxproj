@@ -51,6 +51,7 @@
 		61454C591A623EB700D17DF6 /* nav_btn_menu_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61454C511A623EB700D17DF6 /* nav_btn_menu_normal@3x.png */; };
 		61454C5A1A623EB700D17DF6 /* nav_btn_menu_pressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61454C521A623EB700D17DF6 /* nav_btn_menu_pressed@3x.png */; };
 		61454C5D1A62EA3C00D17DF6 /* ChargeStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454C5C1A62EA3C00D17DF6 /* ChargeStationViewController.m */; };
+		61454C661A6300B100D17DF6 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454C651A6300B100D17DF6 /* Annotation.m */; };
 		90BF14419EA3A6C5EE32D45A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9063D67F8AB6C3D7939D06D6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,8 @@
 		61454C521A623EB700D17DF6 /* nav_btn_menu_pressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_btn_menu_pressed@3x.png"; sourceTree = "<group>"; };
 		61454C5B1A62EA3C00D17DF6 /* ChargeStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeStationViewController.h; sourceTree = "<group>"; };
 		61454C5C1A62EA3C00D17DF6 /* ChargeStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeStationViewController.m; sourceTree = "<group>"; };
+		61454C641A6300B100D17DF6 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		61454C651A6300B100D17DF6 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		9063D67F8AB6C3D7939D06D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B3A8941D3FD6B9143A7D08 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF11B132DAD9C1CE5D176601 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 		37A56A4A1A61DAD40090046A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				61454C641A6300B100D17DF6 /* Annotation.h */,
+				61454C651A6300B100D17DF6 /* Annotation.m */,
 				37A56A4B1A61DB190090046A /* BMWVehicle.h */,
 				37A56A4C1A61DB190090046A /* BMWVehicle.m */,
 				61454C421A621BBA00D17DF6 /* ChargeStation.h */,
@@ -507,6 +512,7 @@
 				61454C481A621C3300D17DF6 /* ChargepointClient.m in Sources */,
 				61454BE11A608AE900D17DF6 /* AppDelegate.m in Sources */,
 				37A56A571A62F1060090046A /* ChargePointCell.m in Sources */,
+				61454C661A6300B100D17DF6 /* Annotation.m in Sources */,
 				61454C061A60D35F00D17DF6 /* RNFrostedSidebar.m in Sources */,
 				61454BDE1A608AE900D17DF6 /* main.m in Sources */,
 				61454C031A60CE8800D17DF6 /* DashBoardViewController.m in Sources */,

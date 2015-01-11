@@ -115,8 +115,8 @@
     [_mapView setRegion:region animated:YES];*/
     
     
-    MKCoordinateRegion startupRegion;
-    startupRegion.center = CLLocationCoordinate2DMake(37.7833, -122.4167);
+   /* MKCoordinateRegion startupRegion;
+    startupRegion.center = CLLocationCoordinate2DMake(37.773575, -122.403352);
     startupRegion.span = MKCoordinateSpanMake(0.2, 0.297129);
     startupRegion.span.longitudeDelta = 0.005f;
     startupRegion.span.longitudeDelta = 0.005f;
@@ -127,7 +127,7 @@
     CLLocationCoordinate2D circleMiddlePoint = CLLocationCoordinate2DMake(37.773575, -122.403352);
     MKCircle *circle = [MKCircle circleWithCenterCoordinate:circleMiddlePoint radius:fenceDistance];
     [self.mapView addOverlay: circle];
-
+*/
     
 }
 
@@ -226,8 +226,8 @@
         coord.longitude= station.longtitude;
         MKCoordinateRegion region1;
         region1.center=coord;
-        region1.span.longitudeDelta=20 ;
-        region1.span.latitudeDelta=20;
+        region1.span.longitudeDelta=5 ;
+        region1.span.latitudeDelta=5;
         [self.mapView setRegion:region1 animated:YES];
         
         NSString *titleStr = station.stationName; //[namesArr objectAtIndex:i] ;
@@ -241,7 +241,22 @@
 }
 
 
+-(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
 
+    MKCoordinateRegion startupRegion;
+    startupRegion.center = CLLocationCoordinate2DMake(37.773575, -122.403352);
+    startupRegion.span = MKCoordinateSpanMake(0.03, 0.03);
+    startupRegion.span.longitudeDelta = 0.0001f;
+    startupRegion.span.longitudeDelta = 0.0001f;
+    [self.mapView setRegion:startupRegion animated:YES];
+    
+    CLLocationDistance fenceDistance = 10;
+    
+  /*  CLLocationCoordinate2D circleMiddlePoint = CLLocationCoordinate2DMake(37.773575, -122.403352);
+    MKCircle *circle = [MKCircle circleWithCenterCoordinate:circleMiddlePoint radius:fenceDistance];
+    [self.mapView addOverlay: circle];*/
+
+}
 
 #pragma mark - delegate
 
