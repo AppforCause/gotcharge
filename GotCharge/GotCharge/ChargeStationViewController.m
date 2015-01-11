@@ -42,10 +42,20 @@ ChargePointCell                   *_stubChargePointCell;
     self.tableView.dataSource =self;
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blurred bkg"]];
     
+    NSLog(@"total stations found %d", [self.stationArray count]);
     [self.tableView reloadData];
 
     
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    //reload the table
+    [self.tableView reloadData];
+}
+
 
 - (void)registerChargePointCells {
     
@@ -78,6 +88,7 @@ ChargePointCell                   *_stubChargePointCell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    NSLog(@"total sections %d", [self.stationArray count]);
     return [self.stationArray count];
 }
 

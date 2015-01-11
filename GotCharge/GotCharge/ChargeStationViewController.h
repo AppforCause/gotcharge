@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChargeStationViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ChargeStationViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSArray   *stationArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
