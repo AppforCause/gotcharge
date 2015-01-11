@@ -15,6 +15,7 @@
 #import <MapKit/MKAnnotation.h>
 #import "ChargepointClient.h"
 #import "Annotation.h"
+#import "ChargeStationViewController.h"
 
 @interface DashBoardViewController ()
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
@@ -171,7 +172,13 @@
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
     NSLog(@"Tapped item at index %i",index);
     
-    if (index == 2) {
+    if (index == 1) {
+
+        ChargeStationViewController *vc = [[ChargeStationViewController alloc] init];
+        //        UINavigationController* nvc = [[UINavigationController alloc] initWithRootViewController:submissionvc];
+        [self presentViewController:vc animated:YES completion:nil];
+        
+    } else if (index == 4) {
         [sidebar dismissAnimated:YES completion:nil];
     }
     //    [self.bmwClient getRangeWithcompletionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
