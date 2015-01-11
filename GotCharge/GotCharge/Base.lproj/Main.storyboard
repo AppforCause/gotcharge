@@ -101,7 +101,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mDO-YM-xye">
                                 <rect key="frame" x="16" y="-578" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="hamburgerMenu.png">
+                                <state key="normal" image="nav_btn_menu_normal@3x.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -125,7 +125,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerMenu.png" width="1200" height="1200"/>
+        <image name="nav_btn_menu_normal@3x.png" width="55" height="37"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

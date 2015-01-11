@@ -28,6 +28,14 @@
 		61454C441A621BBA00D17DF6 /* ChargeStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454C431A621BBA00D17DF6 /* ChargeStation.m */; };
 		61454C481A621C3300D17DF6 /* ChargepointClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454C471A621C3300D17DF6 /* ChargepointClient.m */; };
 		61454C4A1A62258300D17DF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61454C491A62258300D17DF6 /* Foundation.framework */; };
+		61454C531A623EB700D17DF6 /* ic_chargepoint@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61454C4B1A623EB700D17DF6 /* ic_chargepoint@3x.png */; };
+		61454C541A623EB700D17DF6 /* ic_directions_car@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61454C4C1A623EB700D17DF6 /* ic_directions_car@3x.png */; };
+		61454C551A623EB700D17DF6 /* ic_map_120v@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61454C4D1A623EB700D17DF6 /* ic_map_120v@3x.png */; };
+		61454C561A623EB700D17DF6 /* ic_map_240v@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61454C4E1A623EB700D17DF6 /* ic_map_240v@3x.png */; };
+		61454C571A623EB700D17DF6 /* nav_btn_close_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61454C4F1A623EB700D17DF6 /* nav_btn_close_normal@3x.png */; };
+		61454C581A623EB700D17DF6 /* nav_btn_close_pressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61454C501A623EB700D17DF6 /* nav_btn_close_pressed@3x.png */; };
+		61454C591A623EB700D17DF6 /* nav_btn_menu_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61454C511A623EB700D17DF6 /* nav_btn_menu_normal@3x.png */; };
+		61454C5A1A623EB700D17DF6 /* nav_btn_menu_pressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61454C521A623EB700D17DF6 /* nav_btn_menu_pressed@3x.png */; };
 		90BF14419EA3A6C5EE32D45A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9063D67F8AB6C3D7939D06D6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +84,14 @@
 		61454C461A621C3300D17DF6 /* ChargepointClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargepointClient.h; sourceTree = "<group>"; };
 		61454C471A621C3300D17DF6 /* ChargepointClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargepointClient.m; sourceTree = "<group>"; };
 		61454C491A62258300D17DF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		61454C4B1A623EB700D17DF6 /* ic_chargepoint@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_chargepoint@3x.png"; sourceTree = "<group>"; };
+		61454C4C1A623EB700D17DF6 /* ic_directions_car@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_directions_car@3x.png"; sourceTree = "<group>"; };
+		61454C4D1A623EB700D17DF6 /* ic_map_120v@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_map_120v@3x.png"; sourceTree = "<group>"; };
+		61454C4E1A623EB700D17DF6 /* ic_map_240v@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_map_240v@3x.png"; sourceTree = "<group>"; };
+		61454C4F1A623EB700D17DF6 /* nav_btn_close_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_btn_close_normal@3x.png"; sourceTree = "<group>"; };
+		61454C501A623EB700D17DF6 /* nav_btn_close_pressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_btn_close_pressed@3x.png"; sourceTree = "<group>"; };
+		61454C511A623EB700D17DF6 /* nav_btn_menu_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_btn_menu_normal@3x.png"; sourceTree = "<group>"; };
+		61454C521A623EB700D17DF6 /* nav_btn_menu_pressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_btn_menu_pressed@3x.png"; sourceTree = "<group>"; };
 		9063D67F8AB6C3D7939D06D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B3A8941D3FD6B9143A7D08 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF11B132DAD9C1CE5D176601 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +140,14 @@
 		37A56A371A61C91A0090046A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				61454C4B1A623EB700D17DF6 /* ic_chargepoint@3x.png */,
+				61454C4C1A623EB700D17DF6 /* ic_directions_car@3x.png */,
+				61454C4D1A623EB700D17DF6 /* ic_map_120v@3x.png */,
+				61454C4E1A623EB700D17DF6 /* ic_map_240v@3x.png */,
+				61454C4F1A623EB700D17DF6 /* nav_btn_close_normal@3x.png */,
+				61454C501A623EB700D17DF6 /* nav_btn_close_pressed@3x.png */,
+				61454C511A623EB700D17DF6 /* nav_btn_menu_normal@3x.png */,
+				61454C521A623EB700D17DF6 /* nav_btn_menu_pressed@3x.png */,
 				37A56A481A61D9CC0090046A /* hamburgerMenu.png */,
 				37A56A401A61C96C0090046A /* gear.png */,
 				37A56A411A61C96C0090046A /* profile.png */,
@@ -334,13 +358,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61454C591A623EB700D17DF6 /* nav_btn_menu_normal@3x.png in Resources */,
 				61454BE71A608AE900D17DF6 /* Main.storyboard in Resources */,
 				61454BEC1A608AE900D17DF6 /* LaunchScreen.xib in Resources */,
+				61454C5A1A623EB700D17DF6 /* nav_btn_menu_pressed@3x.png in Resources */,
+				61454C531A623EB700D17DF6 /* ic_chargepoint@3x.png in Resources */,
+				61454C541A623EB700D17DF6 /* ic_directions_car@3x.png in Resources */,
 				37A56A431A61C96C0090046A /* gear.png in Resources */,
 				37A56A441A61C96C0090046A /* profile.png in Resources */,
+				61454C571A623EB700D17DF6 /* nav_btn_close_normal@3x.png in Resources */,
 				37A56A491A61D9CC0090046A /* hamburgerMenu.png in Resources */,
+				61454C581A623EB700D17DF6 /* nav_btn_close_pressed@3x.png in Resources */,
+				61454C551A623EB700D17DF6 /* ic_map_120v@3x.png in Resources */,
 				61454BE91A608AE900D17DF6 /* Images.xcassets in Resources */,
 				37A56A451A61C96C0090046A /* star.png in Resources */,
+				61454C561A623EB700D17DF6 /* ic_map_240v@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
