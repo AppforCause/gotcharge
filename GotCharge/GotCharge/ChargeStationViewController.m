@@ -30,6 +30,7 @@ ChargePointCell                   *_stubChargePointCell;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"charge point view controller view did load");
     [self initializeView];
     
 }
@@ -39,7 +40,10 @@ ChargePointCell                   *_stubChargePointCell;
     [self registerChargePointCells];
     self.tableView.delegate = self;
     self.tableView.dataSource =self;
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBg.png"]];
+//    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBg.png"]];
+    
+    [self.tableView reloadData];
+
     
 }
 

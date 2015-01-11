@@ -28,6 +28,8 @@
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
 @property(nonatomic, retain) CLLocationManager *locationManager;
 @property (strong,nonatomic) BMWVehicle *vehicleStats;
+@property (nonatomic, strong) NSArray *stationArray;
+
 
 
 @end
@@ -175,6 +177,7 @@
     if (index == 1) {
 
         ChargeStationViewController *vc = [[ChargeStationViewController alloc] init];
+        vc.stationArray = self.stationArray;
         //        UINavigationController* nvc = [[UINavigationController alloc] initWithRootViewController:submissionvc];
         [self presentViewController:vc animated:YES completion:nil];
         
@@ -287,6 +290,7 @@
 
 - (void) parseDoneWithArray:(NSArray *)parsedList {
     
+    self.stationArray = parsedList;
     NSLog(@"XML parsing done with charge stations %@", parsedList);
     [self plotMap:parsedList];
 }
