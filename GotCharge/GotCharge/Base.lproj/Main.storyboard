@@ -50,6 +50,20 @@
             </objects>
             <point key="canvasLocation" x="37" y="254"/>
         </scene>
+        <!--Charge Station View Controller-->
+        <scene sceneID="bnc-jx-uYO">
+            <objects>
+                <viewController id="7F5-Ol-iva" customClass="ChargeStationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QWp-ms-h6K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6d-Td-c1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="916"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="E7v-EH-xeh">
             <objects>
