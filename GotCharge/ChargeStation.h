@@ -12,8 +12,8 @@
 
 @property(strong, nonatomic) NSString *address;
 @property(strong, nonatomic) NSString *stationName;
-@property( nonatomic) float *latitude;
-@property( nonatomic) float *longtitude;
+@property( nonatomic) double latitude;
+@property( nonatomic) double longtitude;
 @property(strong, nonatomic)  NSString *pricePerHour;
 @property( nonatomic) float *voltage;
 @property( nonatomic) float *current;

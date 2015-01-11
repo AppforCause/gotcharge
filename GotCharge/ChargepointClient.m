@@ -134,7 +134,7 @@
         //[link appendString:string];
     }
     else if ([self.element isEqualToString:@"Lat"]) {
-       // self.currentStation.latitude = [string floatValue];
+        self.currentStation.latitude = [string doubleValue];
         NSLog(@"Lat: %@", string);
         //[link appendString:string];
     }
