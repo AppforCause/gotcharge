@@ -13,4 +13,7 @@
 
 @property (weak, nonatomic) id delegate;
 
+
+-(NSArray *)chargeStationsWithSuccess: (void (^)(NSArray *stations))success failure:(void (^)(NSError *error))failure;
+
 @end

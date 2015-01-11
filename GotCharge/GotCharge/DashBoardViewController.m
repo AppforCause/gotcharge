@@ -13,10 +13,12 @@
 #import "KAProgressLabel.h"
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
+#import "ChargepointClient.h"
 
 @interface DashBoardViewController ()
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 @property (nonatomic, strong) BMWClient         *bmwClient;
+@property (nonatomic, strong) ChargepointClient *chargePointClient;
 
 @property (weak, nonatomic) IBOutlet KAProgressLabel *batteryLevelProgress;
 @property (weak, nonatomic) IBOutlet KAProgressLabel *rangeLevelProgress;
@@ -33,6 +35,15 @@
     // Do any additional setup after loading the view.
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
     self.bmwClient = [[BMWClient alloc] init];
+    self.chargePointClient = [[ChargepointClient alloc] init];
+    
+    [self.chargePointClient chargeStationsWithSuccess:^(NSArray *stations) {
+        NSLog(@"success");
+        
+    } failure:^(NSError *error) {
+         NSLog(@"failure");
+    }];
+     
     NSLog(@"dash view controlled view did load");
     
     self.batteryLevelProgress.progressLabelVCBlock = ^(KAProgressLabel *label, CGFloat progress) {
