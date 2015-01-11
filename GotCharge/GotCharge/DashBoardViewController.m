@@ -10,6 +10,8 @@
 #import "RNFrostedSidebar.h"
 #import "BMWClient.h"
 #import "KAProgressLabel.h"
+#import <MapKit/MapKit.h>
+#import <MapKit/MKAnnotation.h>
 
 @interface DashBoardViewController ()
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
@@ -17,6 +19,8 @@
 
 @property (weak, nonatomic) IBOutlet KAProgressLabel *batteryLevelProgress;
 @property (weak, nonatomic) IBOutlet KAProgressLabel *rangeLevelProgress;
+@property (retain, nonatomic) IBOutlet MKMapView *mapView;
+@property(nonatomic, retain) CLLocationManager *locationManager;
 
 @end
 
@@ -58,6 +62,52 @@
                                                 }];
     [self.rangeLevelProgress setProgress:0.6];
     
+    self.mapView.delegate = self;
+    [self.mapView setMapType:MKMapTypeStandard];
+    [self.mapView setZoomEnabled:YES];
+    [self.mapView setScrollEnabled:YES];
+    
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager startUpdatingLocation];
+    //NSLog(@"%@", [self deviceLocation]);
+    
+    //View Area
+  /* MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
+    region.center.latitude = 37.7833; //self.locationManager.location.coordinate.latitude;
+    region.center.longitude = 122.4167; //self.locationManager.location.coordinate.longitude;
+    region.span.longitudeDelta = 0.005f;
+    region.span.longitudeDelta = 0.005f;
+    [_mapView setRegion:region animated:YES];*/
+    
+    
+    MKCoordinateRegion startupRegion;
+    startupRegion.center = CLLocationCoordinate2DMake(37.7833, -122.4167);
+    startupRegion.span = MKCoordinateSpanMake(0.2, 0.297129);
+    startupRegion.span.longitudeDelta = 0.005f;
+    startupRegion.span.longitudeDelta = 0.005f;
+    [self.mapView setRegion:startupRegion animated:YES];
+    
+    CLLocationDistance fenceDistance = 300;
+    CLLocationCoordinate2D circleMiddlePoint = CLLocationCoordinate2DMake(37.7833, -122.4167);
+    MKCircle *circle = [MKCircle circleWithCenterCoordinate:circleMiddlePoint radius:fenceDistance];
+    [self.mapView addOverlay: circle];
+
+    
+}
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
+{
+    MKCircleRenderer *circleR = [[MKCircleRenderer alloc] initWithCircle:(MKCircle *)overlay];
+    circleR.fillColor = [UIColor greenColor];
+    
+    return circleR;
 }
 
 - (void)didReceiveMemoryWarning {

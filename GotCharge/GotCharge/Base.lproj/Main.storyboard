@@ -114,6 +114,7 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="batteryLevelProgress" destination="0xi-kl-Cte" id="zy7-rL-VAF"/>
+                        <outlet property="mapView" destination="adr-C0-QHt" id="Ihs-v5-kPL"/>
                         <outlet property="rangeLevelProgress" destination="WBI-Sc-JQI" id="kd0-26-opf"/>
                     </connections>
                 </viewController>
