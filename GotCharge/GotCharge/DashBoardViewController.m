@@ -44,9 +44,9 @@
         NSLog(@"success");
         
     } failure:^(NSError *error) {
-         NSLog(@"failure");
+        NSLog(@"failure");
     }];
-     
+    
     NSLog(@"dash view controlled view did load");
     
     self.batteryLevelProgress.progressLabelVCBlock = ^(KAProgressLabel *label, CGFloat progress) {
@@ -58,11 +58,18 @@
     [self.batteryLevelProgress setBackBorderWidth: 10.0];
     [self.batteryLevelProgress setFrontBorderWidth: 9.8];
     [self.batteryLevelProgress setColorTable: @{
-                                  NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):[UIColor redColor],
-                                  NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):[UIColor greenColor]
-                                  }];
+                                                NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):[self colorWithHexString:@"#dgdee0"], //dgdee0
+                                                //[UIColor redColor],
+                                                NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):[UIColor greenColor]
+                                                //[self colorWithHexString:@"#f36c60"],
+                                                //[UIColor greenColor]
+                                                }];
     [self.batteryLevelProgress setProgress:0.4];
     
+    //1fb11c
+    //f36c60
+    //dgdee0
+    //ecf0f1
     
     self.rangeLevelProgress.progressLabelVCBlock = ^(KAProgressLabel *label, CGFloat progress) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -73,14 +80,14 @@
     [self.rangeLevelProgress setBackBorderWidth: 10.0];
     [self.rangeLevelProgress setFrontBorderWidth: 9.8];
     [self.rangeLevelProgress setColorTable: @{
-                                                NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):[UIColor redColor],
-                                                NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):[UIColor greenColor]
-                                                }];
+                                              NSStringFromProgressLabelColorTableKey(ProgressLabelTrackColor):[UIColor redColor],
+                                              NSStringFromProgressLabelColorTableKey(ProgressLabelProgressColor):[UIColor greenColor]
+                                              }];
     [self.rangeLevelProgress setProgress:0.6];
     
     // *********************************************************
     
-      self.vehicleStats = [BMWVehicle currentVehicle];
+    self.vehicleStats = [BMWVehicle currentVehicle];
     self.vehicleStats = [BMWVehicle currentVehicleWithSuccess:^(BMWVehicle *vehicle) {
         [self.batteryLevelProgress setProgress:[vehicle lastBatteryLevel]/100];
         [self.rangeLevelProgress   setProgress:[vehicle lastRange]/100];
@@ -95,6 +102,7 @@
     [self.mapView setZoomEnabled:YES];
     [self.mapView setScrollEnabled:YES];
     
+    //self.view.backgroundColor = [self colorWithHexString:@"#ecf0f1"];
     
     
 }
@@ -108,27 +116,27 @@
     //NSLog(@"%@", [self deviceLocation]);
     
     //View Area
-  /* MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
-    region.center.latitude = 37.7833; //self.locationManager.location.coordinate.latitude;
-    region.center.longitude = 122.4167; //self.locationManager.location.coordinate.longitude;
-    region.span.longitudeDelta = 0.005f;
-    region.span.longitudeDelta = 0.005f;
-    [_mapView setRegion:region animated:YES];*/
+    /* MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
+     region.center.latitude = 37.7833; //self.locationManager.location.coordinate.latitude;
+     region.center.longitude = 122.4167; //self.locationManager.location.coordinate.longitude;
+     region.span.longitudeDelta = 0.005f;
+     region.span.longitudeDelta = 0.005f;
+     [_mapView setRegion:region animated:YES];*/
     
     
-   /* MKCoordinateRegion startupRegion;
-    startupRegion.center = CLLocationCoordinate2DMake(37.773575, -122.403352);
-    startupRegion.span = MKCoordinateSpanMake(0.2, 0.297129);
-    startupRegion.span.longitudeDelta = 0.005f;
-    startupRegion.span.longitudeDelta = 0.005f;
-    [self.mapView setRegion:startupRegion animated:YES];
-    
-    CLLocationDistance fenceDistance = 300;
-   
-    CLLocationCoordinate2D circleMiddlePoint = CLLocationCoordinate2DMake(37.773575, -122.403352);
-    MKCircle *circle = [MKCircle circleWithCenterCoordinate:circleMiddlePoint radius:fenceDistance];
-    [self.mapView addOverlay: circle];
-*/
+    /* MKCoordinateRegion startupRegion;
+     startupRegion.center = CLLocationCoordinate2DMake(37.773575, -122.403352);
+     startupRegion.span = MKCoordinateSpanMake(0.2, 0.297129);
+     startupRegion.span.longitudeDelta = 0.005f;
+     startupRegion.span.longitudeDelta = 0.005f;
+     [self.mapView setRegion:startupRegion animated:YES];
+     
+     CLLocationDistance fenceDistance = 300;
+     
+     CLLocationCoordinate2D circleMiddlePoint = CLLocationCoordinate2DMake(37.773575, -122.403352);
+     MKCircle *circle = [MKCircle circleWithCenterCoordinate:circleMiddlePoint radius:fenceDistance];
+     [self.mapView addOverlay: circle];
+     */
     
 }
 
@@ -147,14 +155,14 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 #pragma mark - RNFrostedSidebarDelegate
 
@@ -164,10 +172,10 @@
     if (index == 2) {
         [sidebar dismissAnimated:YES completion:nil];
     }
-//    [self.bmwClient getRangeWithcompletionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-//        NSLog(@"response recieved for getRange: data '%@'  error: '%@'", data, [error description]);
-//    }];
-  
+    //    [self.bmwClient getRangeWithcompletionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    //        NSLog(@"response recieved for getRange: data '%@'  error: '%@'", data, [error description]);
+    //    }];
+    
 }
 
 
@@ -209,12 +217,12 @@
 }
 
 - (IBAction)MenuClick:(id)sender {
-     NSLog(@"Side bar tapped");
+    NSLog(@"Side bar tapped");
 }
 
 - (IBAction)HamburgerMenuClick:(id)sender {
-     NSLog(@"Side bar tapped");
-     [self launchSideBarMenu];
+    NSLog(@"Side bar tapped");
+    [self launchSideBarMenu];
 }
 
 - (void) plotMap:(NSArray *)chargeStations{
@@ -243,7 +251,7 @@
 
 
 -(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
-
+    
     MKCoordinateRegion startupRegion;
     startupRegion.center = CLLocationCoordinate2DMake(37.773575, -122.403352);
     startupRegion.span = MKCoordinateSpanMake(0.03, 0.03);
@@ -253,10 +261,10 @@
     
     CLLocationDistance fenceDistance = 10;
     
-  /*  CLLocationCoordinate2D circleMiddlePoint = CLLocationCoordinate2DMake(37.773575, -122.403352);
-    MKCircle *circle = [MKCircle circleWithCenterCoordinate:circleMiddlePoint radius:fenceDistance];
-    [self.mapView addOverlay: circle];*/
-
+    /*  CLLocationCoordinate2D circleMiddlePoint = CLLocationCoordinate2DMake(37.773575, -122.403352);
+     MKCircle *circle = [MKCircle circleWithCenterCoordinate:circleMiddlePoint radius:fenceDistance];
+     [self.mapView addOverlay: circle];*/
+    
 }
 
 #pragma mark - delegate
@@ -267,9 +275,45 @@
 }
 
 - (void) parseDoneWithArray:(NSArray *)parsedList {
- 
+    
     NSLog(@"XML parsing done with charge stations %@", parsedList);
-      [self plotMap:parsedList];
+    [self plotMap:parsedList];
+}
+
+-(UIColor*)colorWithHexString:(NSString*)hex
+{
+    NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+    
+    // String should be 6 or 8 characters
+    if ([cString length] < 6) return [UIColor grayColor];
+    
+    // strip 0X if it appears
+    if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
+    
+    if ([cString length] != 6) return  [UIColor grayColor];
+    
+    // Separate into r, g, b substrings
+    NSRange range;
+    range.location = 0;
+    range.length = 2;
+    NSString *rString = [cString substringWithRange:range];
+    
+    range.location = 2;
+    NSString *gString = [cString substringWithRange:range];
+    
+    range.location = 4;
+    NSString *bString = [cString substringWithRange:range];
+    
+    // Scan values
+    unsigned int r, g, b;
+    [[NSScanner scannerWithString:rString] scanHexInt:&r];
+    [[NSScanner scannerWithString:gString] scanHexInt:&g];
+    [[NSScanner scannerWithString:bString] scanHexInt:&b];
+    
+    return [UIColor colorWithRed:((float) r / 255.0f)
+                           green:((float) g / 255.0f)
+                            blue:((float) b / 255.0f)
+                           alpha:1.0f];
 }
 
 @end
