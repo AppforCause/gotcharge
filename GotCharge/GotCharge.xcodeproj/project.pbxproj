@@ -25,6 +25,8 @@
 		37A56A6A1A62F5440090046A /* sidedrawer_logout@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A601A62F5440090046A /* sidedrawer_logout@3x.png */; };
 		37A56A6B1A62F5440090046A /* sidedrawer_settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A611A62F5440090046A /* sidedrawer_settings@3x.png */; };
 		37A56A6C1A62F5440090046A /* sidedrawer_stations@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A621A62F5440090046A /* sidedrawer_stations@3x.png */; };
+		37A56A6F1A62FE720090046A /* nearby_btn_time_active@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A6D1A62FE720090046A /* nearby_btn_time_active@3x.png */; };
+		37A56A701A62FE720090046A /* nearby_btn_time_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A6E1A62FE720090046A /* nearby_btn_time_normal@3x.png */; };
 		61454BDE1A608AE900D17DF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BDD1A608AE900D17DF6 /* main.m */; };
 		61454BE11A608AE900D17DF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BE01A608AE900D17DF6 /* AppDelegate.m */; };
 		61454BE41A608AE900D17DF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BE31A608AE900D17DF6 /* ViewController.m */; };
@@ -85,6 +87,8 @@
 		37A56A601A62F5440090046A /* sidedrawer_logout@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidedrawer_logout@3x.png"; sourceTree = "<group>"; };
 		37A56A611A62F5440090046A /* sidedrawer_settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidedrawer_settings@3x.png"; sourceTree = "<group>"; };
 		37A56A621A62F5440090046A /* sidedrawer_stations@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidedrawer_stations@3x.png"; sourceTree = "<group>"; };
+		37A56A6D1A62FE720090046A /* nearby_btn_time_active@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nearby_btn_time_active@3x.png"; sourceTree = "<group>"; };
+		37A56A6E1A62FE720090046A /* nearby_btn_time_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nearby_btn_time_normal@3x.png"; sourceTree = "<group>"; };
 		61454BD81A608AE900D17DF6 /* GotCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61454BDC1A608AE900D17DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61454BDD1A608AE900D17DF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 		37A56A371A61C91A0090046A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				37A56A6D1A62FE720090046A /* nearby_btn_time_active@3x.png */,
+				37A56A6E1A62FE720090046A /* nearby_btn_time_normal@3x.png */,
 				37A56A591A62F5440090046A /* ic_dashboard_battery@3x.png */,
 				37A56A5A1A62F5440090046A /* ic_dashboard_range@3x.png */,
 				37A56A5B1A62F5440090046A /* ic_nearby_120v@3x.png */,
@@ -418,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61454C591A623EB700D17DF6 /* nav_btn_menu_normal@3x.png in Resources */,
+				37A56A701A62FE720090046A /* nearby_btn_time_normal@3x.png in Resources */,
 				61454BE71A608AE900D17DF6 /* Main.storyboard in Resources */,
 				37A56A661A62F5440090046A /* ic_nearby_240v@3x.png in Resources */,
 				61454BEC1A608AE900D17DF6 /* LaunchScreen.xib in Resources */,
@@ -425,6 +432,7 @@
 				37A56A671A62F5440090046A /* nav_btn_geo_normal@3x.png in Resources */,
 				37A56A651A62F5440090046A /* ic_nearby_120v@3x.png in Resources */,
 				61454C531A623EB700D17DF6 /* ic_chargepoint@3x.png in Resources */,
+				37A56A6F1A62FE720090046A /* nearby_btn_time_active@3x.png in Resources */,
 				61454C541A623EB700D17DF6 /* ic_directions_car@3x.png in Resources */,
 				37A56A681A62F5440090046A /* nav_btn_geo_pressed@3x.png in Resources */,
 				37A56A641A62F5440090046A /* ic_dashboard_range@3x.png in Resources */,
