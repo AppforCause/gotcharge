@@ -179,6 +179,17 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		37A56A501A62EB5B0090046A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				61454C011A60CE8800D17DF6 /* DashBoardViewController.h */,
+				61454C021A60CE8800D17DF6 /* DashBoardViewController.m */,
+				61454C5B1A62EA3C00D17DF6 /* ChargeStationViewController.h */,
+				61454C5C1A62EA3C00D17DF6 /* ChargeStationViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		61454BCF1A608AE900D17DF6 = {
 			isa = PBXGroup;
 			children = (
@@ -206,21 +217,18 @@
 		61454BDA1A608AE900D17DF6 /* GotCharge */ = {
 			isa = PBXGroup;
 			children = (
+				37A56A501A62EB5B0090046A /* ViewControllers */,
 				37A56A4E1A62338D0090046A /* Protocols */,
 				61454BDF1A608AE900D17DF6 /* AppDelegate.h */,
 				61454BE01A608AE900D17DF6 /* AppDelegate.m */,
 				61454BE21A608AE900D17DF6 /* ViewController.h */,
 				61454BE31A608AE900D17DF6 /* ViewController.m */,
-				61454C011A60CE8800D17DF6 /* DashBoardViewController.h */,
-				61454C021A60CE8800D17DF6 /* DashBoardViewController.m */,
 				61454BE51A608AE900D17DF6 /* Main.storyboard */,
 				61454BE81A608AE900D17DF6 /* Images.xcassets */,
 				61454BEA1A608AE900D17DF6 /* LaunchScreen.xib */,
 				61454BDB1A608AE900D17DF6 /* Supporting Files */,
 				61454C041A60D35F00D17DF6 /* RNFrostedSidebar.h */,
 				61454C051A60D35F00D17DF6 /* RNFrostedSidebar.m */,
-				61454C5B1A62EA3C00D17DF6 /* ChargeStationViewController.h */,
-				61454C5C1A62EA3C00D17DF6 /* ChargeStationViewController.m */,
 			);
 			path = GotCharge;
 			sourceTree = "<group>";
