@@ -14,6 +14,7 @@
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
 #import "ChargepointClient.h"
+#import "Annotation.h"
 
 @interface DashBoardViewController ()
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
@@ -122,7 +123,8 @@
     [self.mapView setRegion:startupRegion animated:YES];
     
     CLLocationDistance fenceDistance = 300;
-    CLLocationCoordinate2D circleMiddlePoint = CLLocationCoordinate2DMake(37.7833, -122.4167);
+   
+    CLLocationCoordinate2D circleMiddlePoint = CLLocationCoordinate2DMake(37.773575, -122.403352);
     MKCircle *circle = [MKCircle circleWithCenterCoordinate:circleMiddlePoint radius:fenceDistance];
     [self.mapView addOverlay: circle];
 
@@ -214,6 +216,33 @@
      [self launchSideBarMenu];
 }
 
+- (void) plotMap:(NSArray *)chargeStations{
+    
+    for ( ChargeStation *station in chargeStations)
+    {
+        CLLocationCoordinate2D coord;
+        
+        coord.latitude= station.latitude;
+        coord.longitude= station.longtitude;
+        MKCoordinateRegion region1;
+        region1.center=coord;
+        region1.span.longitudeDelta=20 ;
+        region1.span.latitudeDelta=20;
+        [self.mapView setRegion:region1 animated:YES];
+        
+        NSString *titleStr = station.stationName; //[namesArr objectAtIndex:i] ;
+        // NSLog(@"title is:%@",titleStr);
+        
+        Annotation*  annotObj =[[Annotation alloc]initWithCoordinate:coord title:titleStr];
+        [self.mapView addAnnotation:annotObj];
+        
+    }
+    
+}
+
+
+
+
 #pragma mark - delegate
 
 - (void)progressLabel:(KAProgressLabel *)label progressChanged:(CGFloat)progress
@@ -224,6 +253,7 @@
 - (void) parseDoneWithArray:(NSArray *)parsedList {
  
     NSLog(@"XML parsing done with charge stations %@", parsedList);
+      [self plotMap:parsedList];
 }
 
 @end

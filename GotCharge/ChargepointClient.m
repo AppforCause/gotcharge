@@ -34,11 +34,11 @@
     "   <soap:Body>\n"
     "		<ns2:getPublicStations xmlns:ns2='http://www.example.org/coulombservices/'>\n"
     "			<searchQuery>\n"
-    "				<Proximity>10</Proximity>\n"
+    "				<Proximity>2</Proximity>\n"
     "				<proximityUnit>M</proximityUnit>\n"
     "				<Geo>\n"
-    "					<Lat>37.425758</Lat>\n"
-    "					<Long>-122.097807</Long>\n"
+    "					<Lat>37.773575</Lat>\n"
+    "					<Long>-122.403352</Long>\n"
     "				</Geo>\n"
     "			</searchQuery>\n"
     "		</ns2:getPublicStations>\n"
@@ -139,6 +139,12 @@
         NSLog(@"Lat: %@", string);
         //[link appendString:string];
     }
+    else if ([self.element isEqualToString:@"Long"]) {
+        self.currentStation.longtitude = [string doubleValue];
+        NSLog(@"Long: %@", string);
+        //[link appendString:string];
+    }
+
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
