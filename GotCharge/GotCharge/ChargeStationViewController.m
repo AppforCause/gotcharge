@@ -70,7 +70,43 @@ ChargePointCell                   *_stubChargePointCell;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    return 1;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self.stationArray count];
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    
+    ChargeStation *station = [self.stationArray objectAtIndex:(long)indexPath.section];
+    
+    ChargePointCell *chargePointCell = (ChargePointCell *)cell;
+    chargePointCell.stationNameLabel.text = station.stationName;
+    chargePointCell.voltageLabel.text = station.voltage;
+    chargePointCell.chargeRateLabel.text = station.pricePerHour;
+    chargePointCell.closingTimeLabel.text = station.endTime;
+    chargePointCell.driveTimeLabel.text = @"5 min";
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    ChargeStation *station = [self.stationArray objectAtIndex:(long)indexPath.section];
+
+    
+    CGFloat height = 0;
+    
+    [self configureCell:_stubChargePointCell atIndexPath:indexPath];
+    [_stubChargePointCell layoutSubviews];
+    height = [_stubChargePointCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+//    height = 45;
+    
+        NSLog(@"hieght for cell at section %ld row %ld ------> %f  %@", (long)indexPath.section, (long)indexPath.row, height+1, station.stationName);
+    
+    
+    return height + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,6 +117,14 @@ ChargePointCell                   *_stubChargePointCell;
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    ChargeStation *station = [self.stationArray objectAtIndex:(long)indexPath.section];
+    ChargePointCell *chargePointCell = (ChargePointCell *)cell;
+    chargePointCell.stationNameLabel.text = station.stationName;
+    chargePointCell.voltageLabel.text = station.voltage;
+    chargePointCell.chargeRateLabel.text = station.pricePerHour;
+    chargePointCell.closingTimeLabel.text = station.endTime;
+    chargePointCell.driveTimeLabel.text = @"5 min";
     
     /*
     cell.backgroundColor = self.tableView.backgroundColor;
