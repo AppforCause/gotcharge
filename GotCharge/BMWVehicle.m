@@ -34,6 +34,35 @@
     return currentVehicle;
 }
 
+//+ (BMWVehicle *)currentVehicleWithSuccess:(void (^)(NSURLResponse *, NSError *))success failure:(void (^)(NSURLResponse *, NSError *))failure
++ (BMWVehicle *)currentVehicleWithSuccess:(void (^)(BMWVehicle *))success failure:(void (^)(NSError *))failure {
+    
+    __block BMWVehicle *currentVehicle = nil;
+    
+    [[BMWClient instance] getRangeWithcompletionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSLog(@"response recieved for getRange: response '%@'  error: '%@'", response, [error description]);
+        //        NSLog(@"response recieved for getRange: data '%@'  error: '%@'", data, [error description]);
+        
+        if (![[error description]  isEqual: @"null"]) {
+            failure(error);
+        }
+
+        NSDictionary* jsonData = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:kNilOptions
+                                                                   error:&error];
+        NSLog(@"response recieved for getRange: data '%@'  error: '%@'", jsonData[@"Data"], [error description]);
+        NSArray *jsonArray = [NSArray arrayWithArray:jsonData[@"Data"]];
+        NSLog(@"jsonArray: %@", jsonArray[0]);
+        
+        currentVehicle = [ BMWVehicle initFromJson:jsonArray[0]];
+        [currentVehicle dumpVehicleInfo];
+        success(currentVehicle);
+    }];
+    
+    
+    return currentVehicle;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"name": @"Name",

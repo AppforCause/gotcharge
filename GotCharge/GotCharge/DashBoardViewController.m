@@ -67,6 +67,12 @@
     // *********************************************************
     
       self.vehicleStats = [BMWVehicle currentVehicle];
+    self.vehicleStats = [BMWVehicle currentVehicleWithSuccess:^(BMWVehicle *vehicle) {
+        [self.batteryLevelProgress setProgress:[vehicle lastBatteryLevel]/100];
+        [self.rangeLevelProgress   setProgress:[vehicle lastRange]/100];
+    } failure:^(NSError *error) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];
+    }];
     
     //***********************************************************
     

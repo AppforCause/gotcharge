@@ -87,6 +87,8 @@
 
 + (BMWVehicle *)currentVehicle;
 
++ (BMWVehicle *)currentVehicleWithSuccess: (void (^)(BMWVehicle *vehicle))success failure:(void (^)(NSError *error))failure;
+
 + (BMWVehicle *) initFromJson:(NSDictionary *)dictionary;
 
 - (void) dumpVehicleInfo;
