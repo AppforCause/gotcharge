@@ -34,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //self.batteryLevelProgress.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ic_dashboard_battery@3x"]];
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
     self.bmwClient = [[BMWClient alloc] init];
     self.chargePointClient = [[ChargepointClient alloc] init];

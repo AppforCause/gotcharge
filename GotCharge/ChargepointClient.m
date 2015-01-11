@@ -128,23 +128,43 @@
     if ([self.element isEqualToString:@"Address"]) {
         //[title appendString:string];
         self.currentStation.address = string;
-        NSLog(@"Address: %@", string);
+        //NSLog(@"Address: %@", string);
     } else if ([self.element isEqualToString:@"stationName"]) {
         self.currentStation.stationName = string;
-        NSLog(@"Station Name: %@", string);
+        //NSLog(@"Station Name: %@", string);
         //[link appendString:string];
     }
     else if ([self.element isEqualToString:@"Lat"]) {
         self.currentStation.latitude = [string doubleValue];
-        NSLog(@"Lat: %@", string);
+        //NSLog(@"Lat: %@", string);
         //[link appendString:string];
     }
     else if ([self.element isEqualToString:@"Long"]) {
         self.currentStation.longtitude = [string doubleValue];
-        NSLog(@"Long: %@", string);
+        //NSLog(@"Long: %@", string);
         //[link appendString:string];
     }
-
+    else if ([self.element isEqualToString:@"Voltage"]) {
+        self.currentStation.voltage = string;
+        //NSLog(@"Long: %@", string);
+        //[link appendString:string];
+    }
+    
+    else if ([self.element isEqualToString:@"unitPricePerHour"]) {
+        self.currentStation.pricePerHour = string;
+        //NSLog(@"Long: %@", string);
+        //[link appendString:string];
+    }
+    else if ([self.element isEqualToString:@"startTime"]) {
+        self.currentStation.startTime = string;
+        //NSLog(@"Long: %@", string);
+        //[link appendString:string];
+    }
+    else if ([self.element isEqualToString:@"endTime"]) {
+        self.currentStation.endTime = string;
+        //NSLog(@"Long: %@", string);
+        //[link appendString:string];
+    }
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
