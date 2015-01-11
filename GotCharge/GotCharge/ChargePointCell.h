@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ChargeStation.h"
 
 @interface ChargePointCell : UITableViewCell
+
+@property (strong, nonatomic) ChargeStation *station;
+@property (weak, nonatomic) IBOutlet UILabel *stationNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *voltageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *driveTimeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *reserveTimeAButon;
+@property (weak, nonatomic) IBOutlet UIButton *reserveTimeBButton;
+@property (weak, nonatomic) IBOutlet UIButton *reserveTimeCButton;
+@property (weak, nonatomic) IBOutlet UILabel *chargeRateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *closingTimeLabel;
 
 @end

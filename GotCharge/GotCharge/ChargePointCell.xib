@@ -103,7 +103,17 @@
                     </view>
                 </subviews>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="221" y="320.5"/>
+            <connections>
+                <outlet property="chargeRateLabel" destination="YGW-Fh-87W" id="TVG-2F-Tit"/>
+                <outlet property="closingTimeLabel" destination="zCy-0K-ogc" id="vdG-or-6A5"/>
+                <outlet property="driveTimeLabel" destination="T0K-Vz-twC" id="dAF-BQ-3Wd"/>
+                <outlet property="reserveTimeAButon" destination="kl2-UA-5Ay" id="fKb-TC-Ted"/>
+                <outlet property="reserveTimeBButton" destination="TiM-Xb-5Ir" id="WFk-fo-XjQ"/>
+                <outlet property="reserveTimeCButton" destination="pWh-yl-jc1" id="rZW-vu-vQv"/>
+                <outlet property="stationNameLabel" destination="AJP-Xw-Xsw" id="i6M-cc-Qtr"/>
+                <outlet property="voltageLabel" destination="I4t-Bg-iaA" id="VD2-1d-fcD"/>
+            </connections>
+            <point key="canvasLocation" x="111" y="262.5"/>
         </tableViewCell>
     </objects>
     <resources>
