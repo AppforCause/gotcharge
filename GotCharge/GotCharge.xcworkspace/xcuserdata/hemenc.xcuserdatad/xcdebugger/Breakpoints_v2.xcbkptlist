@@ -202,7 +202,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "349"
-            endingLineNumber = "349">
+            endingLineNumber = "349"
+            landmarkName = "-mapView:viewForAnnotation:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
