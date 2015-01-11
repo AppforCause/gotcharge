@@ -20,12 +20,14 @@
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 @property (nonatomic, strong) BMWClient         *bmwClient;
 @property (nonatomic, strong) ChargepointClient *chargePointClient;
+@property (weak, nonatomic) IBOutlet UIView *statusAlertView;
 
 @property (weak, nonatomic) IBOutlet KAProgressLabel *batteryLevelProgress;
 @property (weak, nonatomic) IBOutlet KAProgressLabel *rangeLevelProgress;
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
 @property(nonatomic, retain) CLLocationManager *locationManager;
 @property (strong,nonatomic) BMWVehicle *vehicleStats;
+
 
 @end
 
@@ -101,6 +103,7 @@
     [self.mapView setZoomEnabled:YES];
     [self.mapView setScrollEnabled:YES];
     
+    self.statusAlertView.backgroundColor = [self colorWithHexString:@"F36C60"];
     self.view.backgroundColor = [self colorWithHexString:@"ecf0f1"];
     
     
@@ -193,13 +196,15 @@
 - (void)launchSideBarMenu {
     
     NSArray *images = @[
-                        [UIImage imageNamed:@"gear"],
-                        [UIImage imageNamed:@"profile"],
-                        [UIImage imageNamed:@"star"],
+                        [UIImage imageNamed:@"sidedrawer_dashboard@3x"],
+                        [UIImage imageNamed:@"sidedrawer_stations@3x"],
+                        [UIImage imageNamed:@"sidedrawer_settings@3x"],
+                        [UIImage imageNamed:@"sidedrawer_logout@3x"],
                         ];
     NSArray *colors = @[
                         [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
                         [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
+                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
                         [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
                         ];
     
@@ -313,6 +318,28 @@
                            green:((float) g / 255.0f)
                             blue:((float) b / 255.0f)
                            alpha:1.0f];
+}
+
+-(MKAnnotationView *)mapView:(MKMapView *)mV viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    MKAnnotationView *pinView = nil;
+    if(annotation != self.mapView.userLocation)
+    {
+        static NSString *defaultPinID = @"com.invasivecode.pin";
+        pinView = (MKAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
+        if ( pinView == nil )
+            pinView = [[MKAnnotationView alloc]
+                       initWithAnnotation:annotation reuseIdentifier:defaultPinID];
+        
+        //pinView.pinColor = MKPinAnnotationColorGreen;
+        pinView.canShowCallout = YES;
+        //pinView.animatesDrop = YES;
+        pinView.image = [UIImage imageNamed:@"ic_map_240v@3x"];    //as suggested by Squatch
+    }
+    else {
+        [self.mapView.userLocation setTitle:@"I am here"];
+    }
+    return pinView;
 }
 
 @end
