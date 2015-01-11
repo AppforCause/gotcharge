@@ -25,6 +25,8 @@
 		61454C081A60D5C000D17DF6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61454C071A60D5C000D17DF6 /* QuartzCore.framework */; };
 		61454C0A1A60D5E000D17DF6 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61454C091A60D5E000D17DF6 /* Accelerate.framework */; };
 		61454C0F1A61EA5E00D17DF6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61454C0E1A61EA5E00D17DF6 /* MapKit.framework */; };
+		61454C441A621BBA00D17DF6 /* ChargeStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454C431A621BBA00D17DF6 /* ChargeStation.m */; };
+		61454C481A621C3300D17DF6 /* ChargepointClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454C471A621C3300D17DF6 /* ChargepointClient.m */; };
 		90BF14419EA3A6C5EE32D45A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9063D67F8AB6C3D7939D06D6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,10 @@
 		61454C071A60D5C000D17DF6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		61454C091A60D5E000D17DF6 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		61454C0E1A61EA5E00D17DF6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		61454C421A621BBA00D17DF6 /* ChargeStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeStation.h; sourceTree = "<group>"; };
+		61454C431A621BBA00D17DF6 /* ChargeStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeStation.m; sourceTree = "<group>"; };
+		61454C461A621C3300D17DF6 /* ChargepointClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargepointClient.h; sourceTree = "<group>"; };
+		61454C471A621C3300D17DF6 /* ChargepointClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargepointClient.m; sourceTree = "<group>"; };
 		9063D67F8AB6C3D7939D06D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B3A8941D3FD6B9143A7D08 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF11B132DAD9C1CE5D176601 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +133,8 @@
 			children = (
 				37A56A4B1A61DB190090046A /* BMWVehicle.h */,
 				37A56A4C1A61DB190090046A /* BMWVehicle.m */,
+				61454C421A621BBA00D17DF6 /* ChargeStation.h */,
+				61454C431A621BBA00D17DF6 /* ChargeStation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 		61454BCF1A608AE900D17DF6 = {
 			isa = PBXGroup;
 			children = (
+				61454C451A621C0800D17DF6 /* Clients */,
 				37A56A4A1A61DAD40090046A /* Models */,
 				37A56A361A61C8F90090046A /* Supporting Files */,
 				37A56A2F1A6090070090046A /* BMW client */,
@@ -197,6 +206,15 @@
 				61454BF61A608AE900D17DF6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61454C451A621C0800D17DF6 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				61454C461A621C3300D17DF6 /* ChargepointClient.h */,
+				61454C471A621C3300D17DF6 /* ChargepointClient.m */,
+			);
+			name = Clients;
 			sourceTree = "<group>";
 		};
 		6A61649E93CD647B23F80160 /* Frameworks */ = {
@@ -360,10 +378,12 @@
 			files = (
 				37A56A4D1A61DB190090046A /* BMWVehicle.m in Sources */,
 				61454BE41A608AE900D17DF6 /* ViewController.m in Sources */,
+				61454C481A621C3300D17DF6 /* ChargepointClient.m in Sources */,
 				61454BE11A608AE900D17DF6 /* AppDelegate.m in Sources */,
 				61454C061A60D35F00D17DF6 /* RNFrostedSidebar.m in Sources */,
 				61454BDE1A608AE900D17DF6 /* main.m in Sources */,
 				61454C031A60CE8800D17DF6 /* DashBoardViewController.m in Sources */,
+				61454C441A621BBA00D17DF6 /* ChargeStation.m in Sources */,
 				37A56A351A60911A0090046A /* BMWClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
