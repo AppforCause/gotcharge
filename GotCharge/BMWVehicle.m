@@ -17,7 +17,16 @@
     
     [[BMWClient instance] getRangeWithcompletionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSLog(@"response recieved for getRange: response '%@'  error: '%@'", response, [error description]);
-        currentVehicle = [ BMWVehicle initFromJson:response];
+//        NSLog(@"response recieved for getRange: data '%@'  error: '%@'", data, [error description]);
+
+        NSDictionary* jsonData = [NSJSONSerialization JSONObjectWithData:data
+                                                             options:kNilOptions
+                                                               error:&error];
+        NSLog(@"response recieved for getRange: data '%@'  error: '%@'", jsonData[@"Data"], [error description]);
+        NSArray *jsonArray = [NSArray arrayWithArray:jsonData[@"Data"]];
+        NSLog(@"jsonArray: %@", jsonArray[0]);
+
+        currentVehicle = [ BMWVehicle initFromJson:jsonArray[0]];
         [currentVehicle dumpVehicleInfo];
     }];
     
@@ -36,8 +45,8 @@
              @"lastBatteryLevel": @"LastBatteryLevel",
              @"lastRange": @"LastRange",
              @"lastFuelEfficiency": @"LastFuelEfficiency",
-             @"latitude": @"Location/Lat",
-             @"longitude": @"Location/Lng",
+             @"latitude": @"LastLocation.Lat",
+             @"longitude": @"LastLocation.Lng",
              };
 }
 
@@ -58,8 +67,8 @@
     NSLog(@"lastBatteryLevel %f", self.lastBatteryLevel);
     NSLog(@"lastRange %f", self.lastRange);
     NSLog(@"lastFuelEfficiency %f", self.lastFuelEfficiency);
-    NSLog(@"latitude %f", self.latitude);
-    NSLog(@"longitude %f", self.longitude);
+    NSLog(@"latitude %@", self.latitude);
+    NSLog(@"longitude %@", self.longitude);
 
 
 }

@@ -12,7 +12,8 @@
 
 #define BMW_CONSUMER_KEY @"c8a89bf5-826e-41b5-b258-a21799af32aa"
 #define BMW_CONSUMER_SECRET @"81b91829-433c-434a-9527-ccd69f2c36ee"
-#define BMW_MOJIOAPI_TOKEN @"8a89bf5-826e-41b5-b258-a21799af32aa"
+#define BMW_MOJIOAPI_TOKEN @"7d4a6df2-e30a-4fc7-a533-3740d0d1b81c"
+
 
 @implementation BMWClient
 

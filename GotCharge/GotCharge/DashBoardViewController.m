@@ -9,6 +9,7 @@
 #import "DashBoardViewController.h"
 #import "RNFrostedSidebar.h"
 #import "BMWClient.h"
+#import "BMWVehicle.h"
 #import "KAProgressLabel.h"
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
@@ -134,9 +135,10 @@
     if (index == 2) {
         [sidebar dismissAnimated:YES completion:nil];
     }
-    [self.bmwClient getRangeWithcompletionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSLog(@"response recieved for getRange: data '%@'  error: '%@'", data, [error description]);
-    }];
+//    [self.bmwClient getRangeWithcompletionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//        NSLog(@"response recieved for getRange: data '%@'  error: '%@'", data, [error description]);
+//    }];
+    BMWVehicle *vehicle = [BMWVehicle currentVehicle];
 }
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {
