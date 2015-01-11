@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChargeStationViewController : UIViewController
+@interface ChargeStationViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) NSArray   *stationArray;
 
 @end

@@ -13,6 +13,8 @@
 		37A56A451A61C96C0090046A /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A421A61C96C0090046A /* star.png */; };
 		37A56A491A61D9CC0090046A /* hamburgerMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A481A61D9CC0090046A /* hamburgerMenu.png */; };
 		37A56A4D1A61DB190090046A /* BMWVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A56A4C1A61DB190090046A /* BMWVehicle.m */; };
+		37A56A571A62F1060090046A /* ChargePointCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A56A551A62F1060090046A /* ChargePointCell.m */; };
+		37A56A581A62F1060090046A /* ChargePointCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A56A561A62F1060090046A /* ChargePointCell.xib */; };
 		61454BDE1A608AE900D17DF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BDD1A608AE900D17DF6 /* main.m */; };
 		61454BE11A608AE900D17DF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BE01A608AE900D17DF6 /* AppDelegate.m */; };
 		61454BE41A608AE900D17DF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61454BE31A608AE900D17DF6 /* ViewController.m */; };
@@ -60,6 +62,9 @@
 		37A56A4B1A61DB190090046A /* BMWVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMWVehicle.h; sourceTree = "<group>"; };
 		37A56A4C1A61DB190090046A /* BMWVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMWVehicle.m; sourceTree = "<group>"; };
 		37A56A4F1A6233E40090046A /* XMLParseDone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLParseDone.h; sourceTree = "<group>"; };
+		37A56A541A62F1060090046A /* ChargePointCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargePointCell.h; sourceTree = "<group>"; };
+		37A56A551A62F1060090046A /* ChargePointCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargePointCell.m; sourceTree = "<group>"; };
+		37A56A561A62F1060090046A /* ChargePointCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChargePointCell.xib; sourceTree = "<group>"; };
 		61454BD81A608AE900D17DF6 /* GotCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61454BDC1A608AE900D17DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61454BDD1A608AE900D17DF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -190,6 +195,16 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		37A56A511A62F07C0090046A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37A56A541A62F1060090046A /* ChargePointCell.h */,
+				37A56A551A62F1060090046A /* ChargePointCell.m */,
+				37A56A561A62F1060090046A /* ChargePointCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		61454BCF1A608AE900D17DF6 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +232,7 @@
 		61454BDA1A608AE900D17DF6 /* GotCharge */ = {
 			isa = PBXGroup;
 			children = (
+				37A56A511A62F07C0090046A /* Views */,
 				37A56A501A62EB5B0090046A /* ViewControllers */,
 				37A56A4E1A62338D0090046A /* Protocols */,
 				61454BDF1A608AE900D17DF6 /* AppDelegate.h */,
@@ -379,6 +395,7 @@
 				61454C541A623EB700D17DF6 /* ic_directions_car@3x.png in Resources */,
 				37A56A431A61C96C0090046A /* gear.png in Resources */,
 				37A56A441A61C96C0090046A /* profile.png in Resources */,
+				37A56A581A62F1060090046A /* ChargePointCell.xib in Resources */,
 				61454C571A623EB700D17DF6 /* nav_btn_close_normal@3x.png in Resources */,
 				37A56A491A61D9CC0090046A /* hamburgerMenu.png in Resources */,
 				61454C581A623EB700D17DF6 /* nav_btn_close_pressed@3x.png in Resources */,
@@ -441,6 +458,7 @@
 				61454BE41A608AE900D17DF6 /* ViewController.m in Sources */,
 				61454C481A621C3300D17DF6 /* ChargepointClient.m in Sources */,
 				61454BE11A608AE900D17DF6 /* AppDelegate.m in Sources */,
+				37A56A571A62F1060090046A /* ChargePointCell.m in Sources */,
 				61454C061A60D35F00D17DF6 /* RNFrostedSidebar.m in Sources */,
 				61454BDE1A608AE900D17DF6 /* main.m in Sources */,
 				61454C031A60CE8800D17DF6 /* DashBoardViewController.m in Sources */,

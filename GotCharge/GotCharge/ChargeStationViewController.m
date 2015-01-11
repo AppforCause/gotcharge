@@ -34,4 +34,37 @@
 }
 */
 
+#pragma mark - Table view data source
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.stationArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"ChargePointCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    /*
+    cell.backgroundColor = self.tableView.backgroundColor;
+    
+    // Get the group from the datasource.
+    ALAssetsGroup *group = [self.assetGroups objectAtIndex:indexPath.row];
+    [group setAssetsFilter:[ALAssetsFilter allPhotos]]; // TODO: Make this a delegate choice.
+    
+    // Setup the cell.
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ (%ld)", [group valueForProperty:ALAssetsGroupPropertyName], (long)[group numberOfAssets]];
+    cell.imageView.image = [UIImage imageWithCGImage:[group posterImage]];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+     */
+    
+    return cell;
+}
+
+
 @end
