@@ -40,7 +40,7 @@ ChargePointCell                   *_stubChargePointCell;
     [self registerChargePointCells];
     self.tableView.delegate = self;
     self.tableView.dataSource =self;
-//    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBg.png"]];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blurred bkg"]];
     
     [self.tableView reloadData];
 

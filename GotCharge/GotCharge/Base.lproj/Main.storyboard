@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -52,7 +52,7 @@
         <!--Navigation Controller-->
         <scene sceneID="E7v-EH-xeh">
             <objects>
-                <navigationController id="3Jx-f2-TXn" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="gotRangeNav" id="3Jx-f2-TXn" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Lqc-FR-f5A"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DiF-5J-Wgr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
